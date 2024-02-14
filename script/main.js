@@ -31,92 +31,92 @@ const animationTimeline = () => {
   tl.to(".container", 0.2, {
     visibility: "visible",
   })
-    .from(".one", 1.1, {
+    .from(".one", 1.0, {
       opacity: 0,
       y: 10,
     })
-    .from(".two", 0.6, {
+    .from(".two", 0.5, {
       opacity: 0,
       y: 10,
     })
     .to(
       ".one",
-      1.1,
-      {
-        opacity: 0,
-        y: 10,
-      },
-      "+=3.5"
-    )
-    .to(
-      ".two",
-      1.1,
-      {
-        opacity: 0,
-        y: 10,
-      },
-      "-=1"
-    )
-    .from(".three", 1.1, {
-      opacity: 0,
-      y: 10,
-      // scale: 0.7
-    })
-    .to(
-      ".three",
-      1.1,
+      1.0,
       {
         opacity: 0,
         y: 10,
       },
       "+=3"
     )
-    .from(".four", 1.1, {
+    .to(
+      ".two",
+      1.0,
+      {
+        opacity: 0,
+        y: 10,
+      },
+      "-=1"
+    )
+    .from(".three", 1.0, {
+      opacity: 0,
+      y: 10,
+      // scale: 0.7
+    })
+    .to(
+      ".three",
+      1.0,
+      {
+        opacity: 0,
+        y: 10,
+      },
+      "+=2.5"
+    )
+    .from(".four", 1.0, {
       scale: 0.2,
       opacity: 0,
     })
-    .from(".fake-btn", 0.4, {
+    .from(".fake-btn", 0.35, {
       scale: 0.2,
       opacity: 0,
     })
     .staggerTo(
       ".hbd-chatbox span",
-      0.70,
+      0.65,
       {
         visibility: "visible",
       },
       0.075
     )
-    .to(".fake-btn", 0.15, {
+    .to(".fake-btn", 0.1, {
       backgroundColor: "rgb(127, 206, 248)",
     })
     .to(
       ".four",
-      0.75,
+      0.6,
       {
         scale: 0.2,
         opacity: 0,
         y: -150,
       },
-      "+=1.1"
+      "+=1.0"
     )
-    .from(".idea-1", 1.1, ideaTextTrans)
-    .to(".idea-1", 1.1, ideaTextTransLeave, "+=2.25")
-    .from(".idea-2", 1.1, ideaTextTrans)
-    .to(".idea-2", 1.1, ideaTextTransLeave, "+=2.25")
-    .from(".idea-3", 1.1, ideaTextTrans)
-    .to(".idea-3 strong", 0.75, {
+    .from(".idea-1", 1.0, ideaTextTrans)
+    .to(".idea-1", 1.0, ideaTextTransLeave, "+=2.0")
+    .from(".idea-2", 1.0, ideaTextTrans)
+    .to(".idea-2", 1.0, ideaTextTransLeave, "+=2.0")
+    .from(".idea-3", 1.0, ideaTextTrans)
+    .to(".idea-3 strong", 0.6, {
       scale: 1.2,
       x: 10,
       backgroundColor: "rgb(21, 161, 237)",
       color: "#fff",
     })
-    .to(".idea-3", 1.1, ideaTextTransLeave, "+=2.25")
-    .from(".idea-4", 1.1, ideaTextTrans)
-    .to(".idea-4", 1.1, ideaTextTransLeave, "+=2.25")
+    .to(".idea-3", 1.0, ideaTextTransLeave, "+=2.0")
+    .from(".idea-4", 1.0, ideaTextTrans)
+    .to(".idea-4", 1.0, ideaTextTransLeave, "+=2.0")
     .from(
       ".idea-5",
-      1.1,
+      1.0,
       {
         rotationX: 15,
         rotationZ: -10,
@@ -125,61 +125,61 @@ const animationTimeline = () => {
         z: 10,
         opacity: 0,
       },
-      "+=0.75"
+      "+=0.6"
     )
     .to(
       ".idea-5 span",
-      1.1,
+      1.0,
       {
         rotation: 90,
         x: 8,
       },
-      "+=0.6"
+      "+=0.5"
     )
     .to(
       ".idea-5",
-      1.1,
+      1.0,
       {
         scale: 0.2,
         opacity: 0,
       },
-      "+=3"
+      "+=2.5"
     )
     .staggerFrom(
       ".idea-6 span",
-      1.2,
+      1.1,
       {
         scale: 1.5,
         opacity: 0,
         rotation: 15,
         ease: Expo.easeOut,
       },
-      0.3
+      0.25
     )
     .staggerTo(
       ".idea-6 span",
-      1.2,
+      1.1,
       {
         scale: 3,
         opacity: 0,
         rotation: -15,
         ease: Expo.easeOut,
       },
-      0.3,
-      "+=1.5"
+      0.25,
+      "+=1.25"
     )
     .staggerFromTo(
       ".baloons img",
-      4.0,
+      2.5,
       {
-        opacity: 0.8,
+        opacity: 0.9,
         y: 1400,
       },
       {
-        opacity: 0.9,
+        opacity: 1,
         y: -1000,
       },
-      0.4
+      0.25
     )
     .from(
       ".girl-dp",
@@ -193,7 +193,7 @@ const animationTimeline = () => {
       },
       "-=2"
     )
-    .from(".hat", 0.75, {
+    .from(".hat", 0.6, {
       x: -100,
       y: 350,
       rotation: -180,
@@ -240,7 +240,7 @@ const animationTimeline = () => {
     )
     .staggerTo(
       ".eight svg",
-      2.0,
+      1.5,
       {
         visibility: "visible",
         opacity: 0,
@@ -248,9 +248,9 @@ const animationTimeline = () => {
         repeat: 3,
         repeatDelay: 1.4,
       },
-      0.4
+      0.3
     )
-    .to(".six", 0.75, {
+    .to(".six", 0.6, {
       opacity: 0,
       y: 30,
       zIndex: "-1",
