@@ -15,12 +15,19 @@
   <body>
     <div class="container">
 
-      <p><audio id="loop-limited" controls="controls" autoplay style="width: 6em;height:20px;"><source src="love_.mp3" type="audio/mpeg" /></audio><br/>
+      <p>
+        <audio id="bgMusic" loop>
+          <source src="love_story.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+        
         <script>
-          var loopLimit = 5;
-          var loopCounter = 0;
-          document.getElementById('loop-limited').addEventListener('ended', function(){if (loopCounter < loopLimit){this.currentTime = 0;this.play();loopCounter++;}
-          }, false);
+            // Get the audio element
+            const bgMusic = document.getElementById('bgMusic');
+            // Play the music when the page loads
+            window.addEventListener('load', () => {
+              bgMusic.play();
+            });
         </script>
       </p>
 
