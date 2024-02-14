@@ -22,12 +22,43 @@
         </audio>
         
         <script>
-            // Get the audio element
-            const bgMusic = document.getElementById('bgMusic');
-            // Play the music when the page loads
-            window.addEventListener('load', () => {
-              bgMusic.play();
-            });
+              // Get the audio element
+              const bgMusic = document.getElementById('bgMusic');
+            
+              // Function to request audio permission
+              function requestAudioPermission() {
+                return new Promise((resolve, reject) => {
+                  if (typeof bgMusic.play === 'function') {
+                    bgMusic.play().then(() => {
+                      resolve(true); // Permission granted
+                    }).catch(() => {
+                      reject(false); // Permission denied
+                    });
+                  } else {
+                    reject(false); // Browser doesn't support audio playback
+                  }
+                });
+              }
+            
+              // Function to handle permission status
+              function handlePermissionStatus(status) {
+                if (status) {
+                  console.log('Audio permission granted');
+                  // Add additional code here to start the webpage
+                } else {
+                  console.log('Audio permission denied');
+                  // Add additional code here to handle permission denial
+                }
+              }
+            
+              // When the page loads, request audio permission
+              window.addEventListener('load', () => {
+                requestAudioPermission().then((status) => {
+                  handlePermissionStatus(status);
+                }).catch((error) => {
+                  console.error('Error requesting audio permission:', error);
+                });
+              });
         </script>
       </p>
 
