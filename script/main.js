@@ -31,11 +31,11 @@ const animationTimeline = () => {
   tl.to(".container", 0.2, {
     visibility: "visible",
   })
-    .from(".one", 1.0, {
+    .from(".one", 1.1, {
       opacity: 0,
       y: 10,
     })
-    .from(".two", 0.5, {
+    .from(".two", 0.6, {
       opacity: 0,
       y: 10,
     })
@@ -57,19 +57,19 @@ const animationTimeline = () => {
       },
       "-=1"
     )
-    .from(".three", 1.0, {
+    .from(".three", 1.1, {
       opacity: 0,
       y: 10,
       // scale: 0.7
     })
     .to(
       ".three",
-      1.0,
+      1.1,
       {
         opacity: 0,
         y: 10,
       },
-      "+=2.5"
+      "+=3"
     )
     .from(".four", 1.0, {
       scale: 0.2,
@@ -87,12 +87,12 @@ const animationTimeline = () => {
       },
       0.075
     )
-    .to(".fake-btn", 0.1, {
+    .to(".fake-btn", 0.15, {
       backgroundColor: "rgb(127, 206, 248)",
     })
     .to(
       ".four",
-      0.6,
+      0.65,
       {
         scale: 0.2,
         opacity: 0,
@@ -103,20 +103,20 @@ const animationTimeline = () => {
     .from(".idea-1", 1.0, ideaTextTrans)
     .to(".idea-1", 1.0, ideaTextTransLeave, "+=2.0")
     .from(".idea-2", 1.0, ideaTextTrans)
-    .to(".idea-2", 1.0, ideaTextTransLeave, "+=2.0")
-    .from(".idea-3", 1.0, ideaTextTrans)
-    .to(".idea-3 strong", 0.6, {
+    .to(".idea-2", 1.0, ideaTextTransLeave, "+=2.5")
+    .from(".idea-3", 1.2, ideaTextTrans)
+    .to(".idea-3 strong", 0.75, {
       scale: 1.2,
       x: 10,
       backgroundColor: "rgb(21, 161, 237)",
       color: "#fff",
     })
-    .to(".idea-3", 1.0, ideaTextTransLeave, "+=2.0")
+    .to(".idea-3", 1.1, ideaTextTransLeave, "+=2.5")
     .from(".idea-4", 1.0, ideaTextTrans)
     .to(".idea-4", 1.0, ideaTextTransLeave, "+=2.0")
     .from(
       ".idea-5",
-      1.0,
+      1.2,
       {
         rotationX: 15,
         rotationZ: -10,
@@ -125,48 +125,48 @@ const animationTimeline = () => {
         z: 10,
         opacity: 0,
       },
-      "+=0.6"
+      "+=0.75"
     )
     .to(
       ".idea-5 span",
-      1.0,
+      1.2,
       {
         rotation: 90,
         x: 8,
       },
-      "+=0.5"
+      "+=0.6"
     )
     .to(
       ".idea-5",
-      1.0,
+      1.2,
       {
         scale: 0.2,
         opacity: 0,
       },
-      "+=2.5"
+      "+=3"
     )
     .staggerFrom(
       ".idea-6 span",
-      1.1,
+      1.15,
       {
         scale: 1.5,
         opacity: 0,
         rotation: 15,
         ease: Expo.easeOut,
       },
-      0.25
+      0.3
     )
     .staggerTo(
       ".idea-6 span",
-      1.1,
+      1.15,
       {
         scale: 3,
         opacity: 0,
         rotation: -15,
         ease: Expo.easeOut,
       },
-      0.25,
-      "+=1.25"
+      0.3,
+      "+=1.4"
     )
     .staggerFromTo(
       ".baloons img",
@@ -179,7 +179,7 @@ const animationTimeline = () => {
         opacity: 1,
         y: -1000,
       },
-      0.25
+      0.2
     )
     .from(
       ".girl-dp",
@@ -240,7 +240,7 @@ const animationTimeline = () => {
     )
     .staggerTo(
       ".eight svg",
-      1.5,
+      3,
       {
         visibility: "visible",
         opacity: 0,
@@ -248,9 +248,9 @@ const animationTimeline = () => {
         repeat: 3,
         repeatDelay: 1.4,
       },
-      0.3
+      0.6
     )
-    .to(".six", 0.6, {
+    .to(".six", 0.75, {
       opacity: 0,
       y: 30,
       zIndex: "-1",
