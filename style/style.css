@@ -228,6 +228,12 @@ body {
   font-weight: lighter;
 }
 
+.nine strong {
+  padding: 3px 5px;
+  border-radius: 3px;
+  display: inline-block;
+}
+
 #replay {
   z-index: 3;
   cursor: pointer;
